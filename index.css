@@ -1,0 +1,369 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    background: linear-gradient(
+        to bottom,
+        #fff8d9 0%,
+        #ffedb0 60%,
+        #ffe59a 100%
+    );
+}
+
+.sun {
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    right: -45px;
+    top: -30px;
+
+    background: #ffd447;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 0 12px rgba(255, 255, 255, 0.8),
+        0 0 0 25px rgba(244, 184, 30, 0.35);
+
+    z-index: 1;
+}
+
+.sun::before {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: -145px;
+    top: -145px;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            from 200deg,
+            transparent 0deg,
+            rgba(255, 205, 65, 0.20) 8deg,
+            transparent 16deg,
+
+            transparent 35deg,
+            rgba(255, 205, 65, 0.20) 43deg,
+            transparent 51deg,
+
+            transparent 72deg,
+            rgba(255, 205, 65, 0.20) 80deg,
+            transparent 88deg,
+
+            transparent 110deg,
+            rgba(255, 205, 65, 0.20) 118deg,
+            transparent 126deg
+        );
+
+    z-index: -1;
+}
+
+.cloud {
+    position: absolute;
+
+    width: 150px;
+    height: 45px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 50px;
+
+    z-index: 3;
+}
+
+.cloud::before {
+    content: "";
+
+    position: absolute;
+
+    width: 65px;
+    height: 65px;
+
+    left: 20px;
+    bottom: 15px;
+
+    background: white;
+
+    border-radius: 50%;
+}
+
+.cloud::after {
+    content: "";
+
+    position: absolute;
+
+    width: 75px;
+    height: 75px;
+
+    right: 20px;
+    bottom: 10px;
+
+    background: white;
+
+    border-radius: 50%;
+}
+
+.cloud-left {
+    left: -50px;
+    bottom: 230px;
+}
+
+.cloud-right {
+    right: -50px;
+    bottom: 260px;
+}
+
+.bird {
+    position: absolute;
+
+    width: 30px;
+    height: 12px;
+
+    border-top: 2px solid #dcae32;
+
+    border-radius: 50%;
+
+    z-index: 4;
+}
+
+.bird::after {
+    content: "";
+
+    position: absolute;
+
+    width: 30px;
+    height: 12px;
+
+    left: 22px;
+    top: -2px;
+
+    border-top: 2px solid #dcae32;
+
+    border-radius: 50%;
+}
+
+.bird1 {
+    top: 190px;
+    left: 130px;
+}
+
+.bird2 {
+    top: 250px;
+    left: 230px;
+
+    transform: scale(0.7);
+}
+
+.hill {
+    position: absolute;
+
+    width: 120%;
+    height: 260px;
+
+    left: -10%;
+
+    border-radius: 50% 50% 0 0;
+
+    z-index: 2;
+}
+
+.hill-back {
+    bottom: -130px;
+
+    background: #ffda70;
+}
+
+.hill-middle {
+    bottom: -175px;
+
+    background: #ffc94f;
+}
+
+.hill-front {
+    bottom: -230px;
+
+    background: #f5ad24;
+}
+
+.login-card {
+    position: absolute;
+
+    width: 510px;
+
+    max-height: 90vh;
+
+    padding: 35px 48px 48px;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.12);
+
+    z-index: 10;
+
+    overflow-y: auto;
+}
+
+.logo-sun {
+    position: relative;
+
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 20px;
+
+    background: #ffc62f;
+
+    border-radius: 50%;
+
+    border: 5px solid #f4b719;
+
+    box-shadow:
+        0 0 0 5px white,
+        0 0 0 8px #f4b719;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+}
+
+.logo-sun span {
+    position: relative;
+
+    z-index: 2;
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+
+    font-size: 30px;
+
+    color: #222;
+
+    margin-bottom: 32px;
+}
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #333;
+
+    font-size: 16px;
+}
+
+input {
+    width: 100%;
+
+    padding: 15px 17px;
+
+    border: 1px solid #d4d4d4;
+
+    border-radius: 9px;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: white;
+}
+
+input:focus {
+    border-color: #f5b400;
+
+    box-shadow:
+        0 0 0 3px rgba(245, 180, 0, 0.12);
+}
+
+.forgot {
+    text-align: right;
+
+    margin-top: -3px;
+
+    margin-bottom: 28px;
+}
+
+.forgot a {
+    color: #e9a300;
+
+    text-decoration: none;
+
+    font-size: 16px;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #ffb51b;
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #efa600;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 15px rgba(239, 166, 0, 0.3);
+}
